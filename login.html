@@ -1,89 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <title>login or sign up</title>
-    <link rel="stylesheet" href="css/login.css">
-    <!-- <link rel="stylesheet" href="css/home.css"> -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>login or sign up</title>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  <!-- <link rel="stylesheet" href="css/home.css"> -->
 </head>
+
 <body>
 
-    <div id="home">
-        <nav>
-            <h1>Bookish Boulevard</h1>
-            <button class="btn" id="signoutbutton" type="button">Sign Out</button>
-            <!-- <button class="btn btn-outline-success menu-icon" id="menu-icon" type="button">&#9776;</button> -->
-            <h4><a href="home.html">Home</a></h4>
-            <h4><a href="#about">About</a></h4>
-            <h4><a href="#services">Services</a></h4>
-            <h4><a href="#contact">Contact</a></h4>
-        </nav>
+  <div id="home">
+    <nav>
+      <h1>Bookish Boulevard</h1>
+      <button class="btn" id="signoutbutton" type="button">Sign Out</button>
+      <!-- <button class="btn btn-outline-success menu-icon" id="menu-icon" type="button">&#9776;</button> -->
+      <h4><a href="home.html">Home</a></h4>
+      <h4><a href="#about">About</a></h4>
+      <h4><a href="#services">Services</a></h4>
+      <h4><a href="#contact">Contact</a></h4>
+    </nav>
+  </div>
+  <div class="cotn_principal">
+    <div class="cont_centrar">
+
+      <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+          <div class="col_md_login">
+            <div class="cont_ba_opcitiy">
+
+              <h2>LOGIN</h2>
+              <p>Welcome Back! <br>already have an account?</p>
+              <button class="btn_login" onclick="change_to_login()">LOGIN</button>
+            </div>
+          </div>
+          <div class="col_md_sign_up">
+            <div class="cont_ba_opcitiy">
+              <h2>SIGN UP</h2>
+
+
+              <p>Don't have an account? don't worry create one</p>
+
+              <button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="cont_back_info">
+          <div class="cont_img_back_grey">
+            <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
+          </div>
+
+        </div>
+        <div class="cont_forms">
+          <div class="cont_img_back_">
+            <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
+          </div>
+          <div class="cont_form_login">
+            <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+            <h2>LOGIN</h2>
+            <input type="text" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <a href="#">forget password?</a>
+            <button class="btn_login" onclick="change_to_login()">LOGIN</button>
+            <div class="login-footer">
+              <h6>Continue with</h6>
+              <!-- <ul class="social-icons"> -->
+              <img src="img/google.png" alt="">
+              <img src="img/twitter.png" alt="">
+              <img src="img/linkedin.png" alt="">
+              <img src="img/facebook.png" alt="">
+            </div>
+          </div>
+
+          <div class="cont_form_sign_up" id="mainForm">
+            <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+            <h2>SIGN UP</h2>
+            <input type="text" placeholder="Email"  id="emailInp"/>
+            <input type="text" placeholder="Full Name" id="fullnameInp"/>
+            <input type="password" placeholder="Password" id="passwordInp" />
+            <!-- <input type="password" placeholder="Confirm Password" /> -->
+            <button class="btn_sign_up" type="submit" id="sign-up-btn" onclick="change_to_sign_up()">SIGN UP</button>
+            <div class="login-footer">
+              <h6>Or register with</h6>
+              <!-- <ul class="social-icons"> -->
+              <img id="google-login-btn" src="img/google.png" alt="">
+              <img src="img/twitter.png" alt="">
+              <img src="img/linkedin.png" alt="">
+              <img src="img/facebook.png" alt="">
+            </div>
+            <!-- <li><a class="facebook" href="#"><img src="img/facebook.png" alt=""></a></li>
+                <li><a class="twitter"  href="#"></a></li>
+                <li><a class="linkedin" href="#"></a></li>
+                <li><a class="google" id="google-login-btn" href="#"><img src="img/google.png" alt=""></a></li> -->
+            <!-- </ul> -->
+
+          </div>
+
+        </div>
+
+      </div>
     </div>
-<div class="cotn_principal">
-<div class="cont_centrar">
-
-  <div class="cont_login">
-<div class="cont_info_log_sign_up">
-      <div class="col_md_login">
-<div class="cont_ba_opcitiy">
-        
-        <h2>LOGIN</h2>  
-  <p>Welcome Back! <br>already have an account?</p> 
-  <button class="btn_login" onclick="change_to_login()">LOGIN</button>
   </div>
-  </div>
-<div class="col_md_sign_up">
-<div class="cont_ba_opcitiy">
-  <h2>SIGN UP</h2>
+  <script src="js/login.js"></script>
 
-  
-  <p>Don't have an account? don't worry create one</p>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
-  <button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
-</div>
-  </div>
-       </div>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDuh6CzOMboFT003om_1CXxO1KjGCgCrfQ",
+      authDomain: "book-store-44af3.firebaseapp.com",
+      projectId: "book-store-44af3",
+      storageBucket: "book-store-44af3.appspot.com",
+      messagingSenderId: "788849686364",
+      appId: "1:788849686364:web:c9b923817877e4dde87399"
+    };
 
-    
-    <div class="cont_back_info">
-       <div class="cont_img_back_grey">
-       <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
-       </div>
-       
-    </div>
-<div class="cont_forms" >
-    <div class="cont_img_back_">
-       <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
-       </div>
- <div class="cont_form_login">
-<a href="#" onclick="hidden_login_and_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
-   <h2>LOGIN</h2>
- <input type="text" placeholder="Email" />
-<input type="password" placeholder="Password" />
-<a href="#">forget password?</a>
-<button class="btn_login" onclick="change_to_login()">LOGIN</button>
-  </div>
-  
-   <div class="cont_form_sign_up">
-<a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-     <h2>SIGN UP</h2>
-<input type="text" placeholder="Email" />
-<input type="text" placeholder="Full Name" />
-<input type="password" placeholder="Password" />
-<!-- <input type="password" placeholder="Confirm Password" /> -->
-<button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const db = getDatabase();
+    auth.languageCode = 'en'
+    const provider = new GoogleAuthProvider();
 
-  </div>
+    const googleloginbtn = document.getElementById('google-login-btn')
+    let EmailInp = document.getElementById("emailInp")
+    let PassInp = document.getElementById("passwordInp")
+    let FullnameInp = document.getElementById("fullnameInp")
+    let signupbtn = document.getElementById("sign-up-btn")
 
-    </div>
-    
-  </div>
- </div>
-</div>
-<script src="js/login.js"></script>
+
+    googleloginbtn.addEventListener("click", () => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const credential = GoogleAuthProvider.credentialFromResult(result);
+          const user = result.user;
+          console.log(user);
+          window.location.href = "../addbook.html"
+
+        }).catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+        });
+    })
+
+    let RegisterUser= evt =>{
+            evt.preventDefault();
+
+            createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
+            .then((credentials)=>{
+                set(ref(db, 'UsersAuthList/' + credentials.user.uid),{
+                        firstname: FnameInp.value,
+                        lastname: lnameInp.value
+                    })
+            })
+            .catch((error)=>{
+                alert(error.message)
+                console.log(error.code);
+                console.log(error.message);
+            })
+            alert("your account has been created now login your account")
+        }
+
+        signupbtn.addEventListener('click', ()=>{
+          alert("signin")
+        });
+
+  </script>
 </body>
+
 </html>

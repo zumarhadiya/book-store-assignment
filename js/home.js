@@ -9,15 +9,25 @@
 let addBookBtn=document.getElementById("addBook")
 let openpopup=document.getElementById("open-popup")
 addBookBtn.addEventListener("click" ,()=>{
-opendivPopup()    
+    opendivPopup()    
 })
 
-const opendivPopup = (meal) => {
+const opendivPopup = () => {
     openpopup.innerHTML = `
     <div class="pop-content">
     <p class="popup-para">To add books you have to login first</p>
     <h5 class="popuplogin-btn"><a href="login.html">login</a></h5>
+    
     </div>
     `
+    // <button id="close-img"><img src="img/close.png"></button>
     openpopup.parentElement.style.display = "block";
 }
+
+
+// let closepopup=document.getElementById("close-img")
+
+// closepopup.addEventListener('click', ()=>{
+//     openpopup.parentElement.style.display = "none";
+
+// })

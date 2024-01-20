@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Book Store</title>
+  <link rel="stylesheet" href="css/addbook.css">
+</head>
+<body>
+
+  <div id="home">
+    <nav>
+      <h1>Bookish Boulevard</h1>
+      <button class="btn" id="signoutbutton" type="button">Sign Out</button>
+      <!-- <button class="btn btn-outline-success menu-icon" id="menu-icon" type="button">&#9776;</button> -->
+      <h4><a href="home.html">Home</a></h4>
+      <h4><a href="#about">About</a></h4>
+      <h4><a href="#services">Services</a></h4>
+      <h4><a href="#contact">Contact</a></h4>
+    </nav>
+  </div>
+
+<form id="bookForm">
+  <label for="authorName">Author Name:</label>
+  <input type="text" id="authorName" required>
+
+  <label for="bookTitle">Book Title:</label>
+  <input type="text" id="bookTitle" required>
+
+  <label for="bookPrice">Book Price:</label>
+  <input type="number" id="bookPrice" required>
+
+  <label for="bookImage">Upload Image:</label>
+  <input type="file" id="bookImage" accept="image/*" required>
+  <h4 class="form-btn" onclick="submitForm()"><a href="#">Add My Book</a></h4>
+  <!-- <button type="button" onclick="submitForm()">Submit</button> -->
+</form>
+
+<div id="booksContainer"></div>
+
+
+<script src="js/addbook.js"></script>
+
+</body>
+</html>
