@@ -351,3 +351,36 @@ nav button:hover {
     z-index: 9;
 }
 
+
+.booksdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #fffcfc;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color:#1d1705;
+}
+
+.book{
+    background-color:#767f64;
+    margin: 30px;
+    border: 5px solid rgb(255, 248, 248);
+    padding: 40px;
+    height: auto;
+    max-width: 200px;
+    box-shadow: 0 5px 10px 5px #767f64;
+}
+.book img {
+    max-width: 100px; 
+    height: auto; 
+    border-radius: 5px;
+    
+  }
+  
+
+  .book:hover{
+  transform: scale(1.03);
+}

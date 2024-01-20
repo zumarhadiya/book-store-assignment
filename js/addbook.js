@@ -9,15 +9,14 @@ function submitForm() {
       alert("fill the full form to add the book")
     }
     else{
-
       
       const bookDiv = document.createElement('div');
       bookDiv.classList.add('book');
       bookDiv.innerHTML = `
+      <img src="${URL.createObjectURL(bookImage)}" alt="${bookTitle} cover">
       <h3>${bookTitle}</h3>
       <p>Author: ${authorName}</p>
       <p>Price: ${bookPrice}</p>
-      <img src="${URL.createObjectURL(bookImage)}" alt="${bookTitle} cover">
       <hr>
       `;
       booksContainer.appendChild(bookDiv);

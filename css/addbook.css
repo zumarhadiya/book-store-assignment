@@ -113,9 +113,11 @@ nav button:hover {
     margin: 100px auto;
     background-color: #1d1705;
     padding: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
+    font-size: 25px;
   }
 
   label, input, button {
@@ -139,11 +141,11 @@ nav button:hover {
     cursor: pointer;
   } */
 
-  #booksContainer {
+  /* #booksContainer {
     margin-top: 20px;
-  }
+  } */
 
-  .book {
+  /* .book {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -163,7 +165,7 @@ nav button:hover {
     color: #1d1705;
     cursor: pointer;
   }
-  
+   */
 
   .form-btn {
     display: block;
@@ -208,4 +210,37 @@ nav button:hover {
     color: rgb(245, 245, 245);
     position: relative;
     z-index: 9;
+}
+
+.booksdiv{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #fffcfc;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color:#1d1705;
+}
+
+.book{
+  background-color:#767f64;
+  margin: 30px;
+  border: 5px solid rgb(255, 248, 248);
+  padding: 40px;
+  height: auto;
+  max-width: 200px;
+  box-shadow: 0 5px 10px 5px #767f64;
+}
+.book img {
+  max-width: 100px; 
+  height: auto; 
+  border-radius: 5px;
+  
+}
+
+
+.book:hover{
+transform: scale(1.03);
 }
