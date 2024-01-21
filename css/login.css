@@ -31,10 +31,10 @@ nav h4 {
   display: block;
   color: white;
   text-align: center;
-  padding: 15px 16px;
+  padding: 10px;
   text-decoration: none;
   border-radius: 50px;
-  margin: 7px;
+  margin: 5px;
   position: relative;
   z-index: 9;
   overflow: hidden;
@@ -91,10 +91,10 @@ nav h1:hover {
   display: block;
   color: white;
   text-align: center;
-  padding: 15px 16px;
+  padding: 16px;
   border: none;
   border-radius: 50px;
-  margin: 20px 8px;
+  margin: 8px;
   background-color: #767f64;
 }
 

@@ -24,10 +24,10 @@
     <nav>
       <h1>Bookish Boulevard</h1>
       <button class="btn" id="signoutbutton" type="button">Sign Out</button>
+      <h4><a href="home.html">About</a></h4>
+      <h4><a href="home.html">Contact</a></h4>
+      <h4><a href="home.html">books</a></h4>
       <h4><a href="home.html">Home</a></h4>
-      <h4><a href="#about">About</a></h4>
-      <h4><a href="#services">Services</a></h4>
-      <h4><a href="#contact">Contact</a></h4>
     </nav>
   </div>
 
@@ -85,8 +85,8 @@
         bookDiv.classList.add('book');
         bookDiv.innerHTML = `
           <h3>${bookTitle}</h3>
-          <p>Author: ${authorName}</p>
-          <p>Price: ${bookPrice}</p>
+          <p><b>Author:</b> ${authorName}</p>
+          <p><b>Price:</b> ${bookPrice}</p>
           <img src="${URL.createObjectURL(bookImage)}" alt="${bookTitle} cover">
           <hr>
         `;
