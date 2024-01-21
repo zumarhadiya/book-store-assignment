@@ -305,22 +305,22 @@ nav button:hover {
 
 
 .popuplogin-btn {
-    float: inline-start;
+    float: inline-end;
     display: block;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: rgb(7, 7, 7);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     text-decoration: none;
     border-radius: 50px;
     border: none;
-    margin: 30px 0px 0px 284px;
+    margin: 5%;
     position: relative;
     z-index: 9;
     overflow: hidden;
     background-color:#767f64;
     cursor: pointer;
-
+    
 }
 
 .popuplogin-btn::after {

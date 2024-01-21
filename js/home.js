@@ -17,17 +17,28 @@ const opendivPopup = () => {
     <div class="pop-content">
     <p class="popup-para">To add books you have to login first</p>
     <h5 class="popuplogin-btn"><a href="login.html">login</a></h5>
-    
+    <h5 class="popuplogin-btn" id="closeimg"><a href="">close</a></h5>
     </div>
     `
-    // <button id="close-img"><img src="img/close.png"></button>
     openpopup.parentElement.style.display = "block";
+    const closeButton = document.getElementById("closeimg");
+    if (closeButton) {
+        closeButton.addEventListener("click", closedivPopup);
+    }
 }
 
 
-// let closepopup=document.getElementById("close-img")
+
+const closedivPopup = () => {
+openpopup.parentElement.style.display = "none";
+}
+
+
+
+// let closepopup=document.getElementById("closeimg")
 
 // closepopup.addEventListener('click', ()=>{
+//     openpopup.innerHTML=""
 //     openpopup.parentElement.style.display = "none";
 
 // })

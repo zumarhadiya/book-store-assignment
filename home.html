@@ -120,11 +120,9 @@
   </div>
 
   <script type="module">
-    // Import necessary Firebase modules
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
     import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
-    // Your Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyDuh6CzOMboFT003om_1CXxO1KjGCgCrfQ",
       authDomain: "book-store-44af3.firebaseapp.com",
@@ -171,10 +169,11 @@
         booksContainer.appendChild(bookDiv);
       });
     });
+    
   </script>
 
 
-  <script src="js/home.js" type="module"></script>
+  <script src="js/home.js"></script>
 </body>
 
 </html>
