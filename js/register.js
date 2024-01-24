@@ -1,5 +1,8 @@
+//  sihn in with google
+
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, FacebookAuthProvider, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, FacebookAuthProvider, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
 import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
 
 const firebaseConfig = {
@@ -32,37 +35,49 @@ googleloginbtn.addEventListener("click", () => {
       const user = result.user;
       console.log(user);
       window.location.href = "../addbook.html"
-      
+
     }).catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      
+
     });
 })
 
+// register with email password
+signupbtn.addEventListener("click",()=>{
 
-//  login with email and pass
-let login=document.getElementById('login-btn')
-login.addEventListener("click", ()=>{
-
-    // function loginWithEmailAndPassword() {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        
-    signInWithEmailAndPassword(auth,email, password)
-      .then((Credentials)=> {
-        // User successfully logged in
-        // var user = userCredential.user;
-        console.log('User logged in:', Credentials.user);
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  var username = document.getElementById('username').value;
+  
+  // Create user with email and password
+  createUserWithEmailAndPassword(auth, email, password)
+  .then((credentials)=>{
+    set(ref(db, 'UsersAuthList/' + credentials.user.uid),{
+      username: username,
+      email: email
+            
+        })
         window.location.href = "../addbook.html"
-        
+        alert('User signed up successfully! now login with your credentials. User ID: ' + credentials.user.uid);
 
-      })
-      .catch(function(error) {
-        // Handle errors
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        console.error('Login error:', errorCode, errorMessage);
-      });
-      // }
+
 })
+
+    // .then(function(userCredential) {
+    //   var user = userCredential.user;
+  
+    //   // Save username in the Realtime Database
+    //   firebase.database().ref('users/' + user.uid).set({
+    //   });
+  
+    // })
+    .catch((error)=> {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      alert('Error: ' + errorMessage);
+    });
+})
+// function signUpWithEmailAndPassword() {
+// }
+

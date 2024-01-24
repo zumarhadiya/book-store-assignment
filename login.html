@@ -1,182 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <title>login or sign up|| BOOKISH BOULEVARD</title>
+  <link rel="stylesheet" href="css/home.css">
+  <title>login| bookish boulevard</title>
   <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-  <!-- <link rel="stylesheet" href="css/home.css"> -->
 </head>
-
 <body>
-
   <div id="home">
-    <nav>
+    <nav class="topnav" id="myTopnav">
       <h1>Bookish Boulevard</h1>
-      <button class="btn" id="signoutbutton" type="button">Sign Out</button>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <img src="img/icons8-hamburger-menu-50.png" alt="">
+      </a>
+      <div class="h4a">
+      <!-- <h4> <a href="" id="signoutbutton">Sign Out</a></h4> -->
+      <!-- <button class="btn" id="signoutbutton" type="button">Sign Out</button> -->
       <!-- <button class="btn btn-outline-success menu-icon" id="menu-icon" type="button">&#9776;</button> -->
-      <h4><a href="home.html">About</a></h4>
       <h4><a href="home.html">Contact</a></h4>
       <h4><a href="home.html">books</a></h4>
-      <h4><a href="home.html">Home</a></h4>
+      <h4><a href="home.html">About</a></h4>
+      <h4><a href="home.html">Home</a></h4></div>
     </nav>
   </div>
-  <div class="cotn_principal">
-    <div class="cont_centrar">
 
-      <div class="cont_login">
-        <div class="cont_info_log_sign_up">
-          <div class="col_md_login">
-            <div class="cont_ba_opcitiy">
-
-              <h2>LOGIN</h2>
-              <p>Welcome Back! <br>already have an account?</p>
-              <button class="btn_login" onclick="change_to_login()">LOGIN</button>
-            </div>
-          </div>
-          <div class="col_md_sign_up">
-            <div class="cont_ba_opcitiy">
-              <h2>SIGN UP</h2>
-
-
-              <p>Don't have an account? don't worry create one</p>
-
-              <button class="btn_sign_up" onclick="change_to_sign_up()">SIGN UP</button>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="cont_back_info">
-          <div class="cont_img_back_grey">
-            <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
-          </div>
-
-        </div>
-        <div class="cont_forms">
-          <div class="cont_img_back_">
-            <img src="img/susan-q-yin-2JIvboGLeho-unsplash.jpg" alt="" />
-          </div>
-          <div class="cont_form_login">
-            <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-            <h2>LOGIN</h2>
-            <input type="text" placeholder="Email" />
-            <input type="password" placeholder="Password" />
-            <a href="#">forget password?</a>
-            <button class="btn_login" onclick="change_to_login()">LOGIN</button>
-            <div class="login-footer">
-              <h6>Continue with</h6>
-              <!-- <ul class="social-icons"> -->
-              <img src="img/google.png" alt="">
-              <img src="img/twitter.png" alt="">
-              <img src="img/linkedin.png" alt="">
-              <img src="img/facebook.png" alt="">
-            </div>
-          </div>
-
-          <div class="cont_form_sign_up" id="mainForm">
-            <a href="#" onclick="hidden_login_and_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
-            <h2>SIGN UP</h2>
-            <input type="text" placeholder="Email"  id="emailInp"/>
-            <input type="text" placeholder="Full Name" id="fullnameInp"/>
-            <input type="password" placeholder="Password" id="passwordInp" />
-            <!-- <input type="password" placeholder="Confirm Password" /> -->
-            <button class="btn_sign_up" type="submit" id="sign-up-btn" onclick="change_to_sign_up()">SIGN UP</button>
-            <div class="login-footer">
-              <h6>Or register with</h6>
-              <!-- <ul class="social-icons"> -->
-              <img id="google-login-btn" src="img/google.png" alt="">
-              <img src="img/twitter.png" alt="">
-              <img src="img/linkedin.png" alt="">
-              <img src="img/facebook.png" alt="">
-            </div>
-            <!-- <li><a class="facebook" href="#"><img src="img/facebook.png" alt=""></a></li>
-                <li><a class="twitter"  href="#"></a></li>
-                <li><a class="linkedin" href="#"></a></li>
-                <li><a class="google" id="google-login-btn" href="#"><img src="img/google.png" alt=""></a></li> -->
-            <!-- </ul> -->
-
-          </div>
-
-        </div>
-
+  <div class="form">
+    <form id="signup-form">
+      <h2>LOG IN</h2>
+      <div id="error-message" class="error-message"></div>
+      <!-- <label for="username">Full Name:</label>
+      <input type="text" id="username" name="username" required> -->
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+<!--   
+      <label for="confirm-password">Confirm Password:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required> -->
+  
+      <!-- <div class="link-container">
+        <a href="#">Forgot Password?</a>
+      </div> -->
+      <button id="login-btn" class="signup-btn" onclick="validateForm()" type="button">LOG IN</button>
+      <div class="link-container">
+        <span>Don't have an account? <a href="register.html">Create an account</a></span>
       </div>
-    </div>
+
+      <h4>or continue with</h4>
+      <div class="social-buttons">
+        <!-- <button class="social-button">Facebook</button> -->
+        <button id="google-btn" class="social-button google">Google</button>
+        <!-- <button class="social-button github">GitHub</button> -->
+      </div>
+  
+    
+    </form>
   </div>
-  <script src="js/login.js"></script>
-
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-    import { getAuth, createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-    import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyDuh6CzOMboFT003om_1CXxO1KjGCgCrfQ",
-      authDomain: "book-store-44af3.firebaseapp.com",
-      projectId: "book-store-44af3",
-      storageBucket: "book-store-44af3.appspot.com",
-      messagingSenderId: "788849686364",
-      appId: "1:788849686364:web:c9b923817877e4dde87399"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getDatabase();
-    auth.languageCode = 'en'
-    const provider = new GoogleAuthProvider();
-
-    const googleloginbtn = document.getElementById('google-login-btn')
-    let EmailInp = document.getElementById("emailInp")
-    let PassInp = document.getElementById("passwordInp")
-    let FullnameInp = document.getElementById("fullnameInp")
-    let signupbtn = document.getElementById("sign-up-btn")
 
 
-    googleloginbtn.addEventListener("click", () => {
-      signInWithPopup(auth, provider)
-        .then((result) => {
-          const credential = GoogleAuthProvider.credentialFromResult(result);
-          const user = result.user;
-          console.log(user);
-          window.location.href = "../addbook.html"
+  <script src="js/login.js" type="module"></script>
 
-        }).catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
+  <script>
+//responsive function
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
-        });
-    })
 
-    let RegisterUser= evt =>{
-            evt.preventDefault();
+  function validateForm() {
+      // var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      // var confirmPassword = document.getElementById('confirm-password').value;
+      var errorMessage = document.getElementById('error-message');
 
-            createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
-            .then((credentials)=>{
-                set(ref(db, 'UsersAuthList/' + credentials.user.uid),{
-                        firstname: FnameInp.value,
-                        lastname: lnameInp.value
-                    })
-            })
-            .catch((error)=>{
-                alert(error.message)
-                console.log(error.code);
-                console.log(error.message);
-            })
-            alert("your account has been created now login your account")
-        }
+      // Simple validation
+      if (email.trim() === '' || password.trim() === '') {
+        errorMessage.textContent = 'All fields are required';
+        return;
+      }
 
-        signupbtn.addEventListener('click', ()=>{
-          alert("signin")
-        });
+    }
 
+
+
+
+//sign out creds
+    //   let SignoutBtn = document.getElementById('signoutbutton');
+    // let Signout = () => {
+    //   sessionStorage.removeItem("user-creds");
+    //   sessionStorage.removeItem("user-info");
+    //   // window.location.href = 'login.html';
+    //   alert("you have been signed out succesfully")
+    // }
+    // SignoutBtn.addEventListener('click', Signout);
   </script>
 </body>
-
 </html>

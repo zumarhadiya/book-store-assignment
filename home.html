@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -13,26 +14,32 @@
 
 <body>
   <div id="home">
-    <nav>
+    <nav class="topnav" id="myTopnav">
       <h1>Bookish Boulevard</h1>
-      <button class="btn" id="signoutbutton" type="button">Sign Out</button>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <img src="img/icons8-hamburger-menu-50.png" alt="">
+      </a>
+      <div class="h4a">
+      <h4> <a href="" id="signoutbutton">Sign Out</a></h4>
+      <!-- <button class="btn" id="signoutbutton" type="button">Sign Out</button> -->
       <!-- <button class="btn btn-outline-success menu-icon" id="menu-icon" type="button">&#9776;</button> -->
       <h4><a href="#contact">Contact</a></h4>
       <h4><a href="#booksContainer">books</a></h4>
       <h4><a href="#page2">About</a></h4>
-      <h4><a href="#home">Home</a></h4>
+      <h4><a href="#home">Home</a></h4></div>
     </nav>
   </div>
   <div>
-    <div>
+    <div class="wel">
       <!-- <h1>Bookish Boulevard</h1> -->
-      <img src="img/henry-be-lc7xcWebECc-unsplash.jpg" height="530px" width="700px" class="home-img">
-      <h1 class="welcome-head">Welcome To <br> Our Book store!</h1>
-      <p class="para">Bookish boulivard provides you the best solution to buy or sell books online in
-        Pakistan at single click. we only deals in original books with competitive rates. So, what
-        are you waiting for? try our books or sell yours!</p>
-      <h5 class="add-book" id="addBook"><a href="#">ADD BOOK</a></h5>
-
+      <img src="img/henry-be-lc7xcWebECc-unsplash.jpg" height="500px" width="50%" class="home-img">
+      <div class="wel-container">
+        <h1 class="welcome-head">Welcome To <br> Our Book store!</h1>
+        <p class="para">Bookish boulivard provides you the best solution to buy or sell books online in
+          Pakistan at single click. we only deals in original books with competitive rates. So, what
+          are you waiting for? try our books or sell yours!</p>
+        <h5 class="add-book" id="addBook"><a href="#">ADD BOOK</a></h5>
+      </div>
       <div id="open-popup"></div>
     </div>
 
@@ -107,17 +114,20 @@
         <div class="contact-content">
           <h2>Contact Me</h2>
           <p class="mail">
-            Get in touch with me <i class="fas fa-arrow-right"></i> 
+            Get in touch with me <i class="fas fa-arrow-right"></i>
             <a href="zumarhadiya2@gmail.com">zumarhadiya2@gmail.com</a>
           </p>
           <p class="links">Or find me on:</p>
-          <a href="https://www.linkedin.com/in/zumar-hadiya-71856921a" target="blank"><img src="img/linkedin.png" alt=""></a>
-          <a href="https://www.facebook.com/zumar.hadiya?mibextid=ZbWKwL" target="blank"><img src="img/facebook.png" alt=""></i></a>
+          <a href="https://www.linkedin.com/in/zumar-hadiya-71856921a" target="blank"><img src="img/linkedin.png"
+              alt=""></a>
+          <a href="https://www.facebook.com/zumar.hadiya?mibextid=ZbWKwL" target="blank"><img src="img/facebook.png"
+              alt=""></i></a>
           <!-- <a href="https://instagram.com/hadi._.yaayyy?igshid=NTc4MTIwNjQ2YQ==" target="blank"><i class="fab fa-instagram"></i> Instagram</a> -->
         </div>
       </div>
     </div>
   </div>
+
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
@@ -169,7 +179,16 @@
         booksContainer.appendChild(bookDiv);
       });
     });
-    
+
+    let SignoutBtn = document.getElementById('signoutbutton');
+    let Signout = () => {
+      sessionStorage.removeItem("user-creds");
+      sessionStorage.removeItem("user-info");
+      // window.location.href = 'login.html';
+      alert("you have been signed out succesfully")
+    }
+    SignoutBtn.addEventListener('click', Signout);
+
   </script>
 
 
